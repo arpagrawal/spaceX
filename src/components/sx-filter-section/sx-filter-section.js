@@ -1,5 +1,5 @@
 export default {
-    name: 'sx-name-section',
+    name: 'sx-filter-section',
     components: {},
     props: {},
     data() {

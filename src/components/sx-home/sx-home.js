@@ -1,9 +1,9 @@
-import sxNameSection from './../sx-name-section/sx-name-section.vue';
+import sxFilterSection from './../sx-filter-section/sx-filter-section.vue';
 
 export default {
     name: 'sx-home',
     components: {
-        sxNameSection
+        sxFilterSection
     },
     props: {},
     data() {
