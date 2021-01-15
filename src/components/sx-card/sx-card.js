@@ -1,11 +1,11 @@
 export default {
-    name: 'sx-filter-section',
+    name: 'sx-card',
     components: {},
     props: {
-      launchYears : {
-        type: Array,
-        default: []
-      }
+        cardInfo : {
+            type : Object,
+            default: {}
+        }
     },
     data() {
       return {};

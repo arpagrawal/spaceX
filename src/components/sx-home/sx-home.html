@@ -1,3 +1,11 @@
 <div class="sx-home">
-    <sx-filter-section></sx-filter-section>
+    <div class="filter-section">
+        <sx-filter-section :launch-years="launchYears"></sx-filter-section>
+    </div>
+    
+    <div class="result-section">
+        <div class="result-tile" v-for="spaceX in spacexData">
+            <sx-card :card-info="spaceX"></sx-card>
+        </div>
+    </div>
 </div>
