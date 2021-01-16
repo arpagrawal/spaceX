@@ -1,9 +1,6 @@
-import sxFilterButton from '../sx-filter-button/sx-filter-button.vue';
-
 export default {
     name: 'sx-filter-section',
     components: {
-      sxFilterButton
     },
     props: {
       launchYears : {
