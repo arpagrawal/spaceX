@@ -2,20 +2,21 @@
     <div class="filter">
             <div class="filter-heading">Launch Date</div>
             <div class="filter-items">
-                <button class="item" v-for="year in launchYears">{{year}}</button>
+                <button class="item" v-for="year in launchYears" @click="applyFilter('launch_date',year)">{{year}}</button>
             </div>
     </div>
     <div class="filter">
-            <div class="filter-heading">Launch Date</div>
-            <div class="filter-items">
-                <button class="item" v-for="year in launchYears">{{year}}</button>
-            </div>
+        <p class="filter-heading">Successful Launch</p>
+        <div class="filter-items">
+                <button class="item" @click="applyFilter('launch_success',year)">True</button>
+                <button class="item" @click="applyFilter('launch_success',year)">False</button>
+        </div>
     </div>
     <div class="filter">
-            <div class="filter-heading">Launch Date</div>
-            <div class="filter-items">
-                <button class="item" v-for="year in launchYears">{{year}}</button>
-            </div>
+        <p class="filter-heading">Successful Landing</p>
+        <div class="filter-items">
+                <button class="item" @click="applyFilter('land_success',year)">True</button>
+                <button class="item" @click="applyFilter('land_success',year)">False</button>
+        </div>
     </div>
-    
 </section>

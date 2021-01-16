@@ -1,6 +1,6 @@
 <div class="sx-home">
     <div class="filter-section">
-        <sx-filter-section :launch-years="launchYears"></sx-filter-section>
+        <sx-filter-section :launch-years="launchYears" @filterChange="getFilteredProducts($event)"></sx-filter-section>
     </div>
     
     <div class="result-section">

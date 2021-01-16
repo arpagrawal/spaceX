@@ -8,10 +8,22 @@ export default {
       }
     },
     data() {
-      return {};
+      return {
+        currentFilter: {},
+      };
     },
     directives: {},
     computed: {},
     mounted() {},
-    methods: {},
+    methods: {
+      applyFilter(category, value) {
+        if (this.currentFilter[category] === value) {
+          this.$delete(this.currentFilter,category);
+        } else {
+          this.$set(this.currentFilter, category, value);
+        }
+        console.log(`from filter ${JSON.stringify(this.currentFilter)}`);
+        this.$emit('filterChange', JSON.stringify(this.currentFilter));
+      }
+    },
   };
