@@ -27,7 +27,7 @@ export default {
 body,
 #app {
   font-family: 'Source Sans Pro', sans-serif;
-  background: @white;
+  background: @lightest-grey;
 }
 
 #app {
@@ -43,7 +43,8 @@ a {
 }
 
 .sx-content-container {
-    max-width: 1260px;
+    max-width: 1440px;
     margin: 0 auto;
+    padding: 32px;
 }
 </style>

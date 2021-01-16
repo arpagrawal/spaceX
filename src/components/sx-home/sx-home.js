@@ -60,6 +60,7 @@ export default {
       getLaunchYears(data) {
         let yearList = new Set(data.map((item) => item.launch_year));
         yearList = Array(...yearList);
+        console.log(`Year array ${yearList}`);
         return yearList;
       },
       updateURL() {

@@ -1,19 +1,24 @@
 <section class="sx-filter-section">
     <div class="filter">
-            <div class="filter-heading">Launch Date</div>
+            <h2>FILTERS</h2>
+            <hr/>
+            <h3 class="filter-heading">Launch Date</h3>
             <div class="filter-items">
-                <button class="item" v-for="year in launchYears" @click="applyFilter('launch_date',year)">{{year}}</button>
+                <button class="item" :class="{'active': isActive}" v-for="year in launchYears" @click="applyFilter('launch_date',year)">{{year}}</button>
+                <!-- <template v-for="year in launchYears">
+                        <sx-filter-button @clicked="applyFilter('launch_date',year)" :value="year"></sx-filter-button>
+                </template> -->
             </div>
     </div>
     <div class="filter">
-        <p class="filter-heading">Successful Launch</p>
+        <h3 class="filter-heading">Successful Launch</h3>
         <div class="filter-items">
                 <button class="item" @click="applyFilter('launch_success',true)">True</button>
                 <button class="item" @click="applyFilter('launch_success',false)">False</button>
         </div>
     </div>
     <div class="filter">
-        <p class="filter-heading">Successful Landing</p>
+        <h3 class="filter-heading">Successful Landing</h3>
         <div class="filter-items">
                 <button class="item" @click="applyFilter('land_success',true)">True</button>
                 <button class="item" @click="applyFilter('land_success',false)">False</button>

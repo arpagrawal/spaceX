@@ -1,12 +1,25 @@
 .sx-filter-section{
+    .filter {
+        background: #dedbdb;
+        padding: 16px 0 0 16px;
+        hr {
+            margin: 10px 10px 0;
+        }
+    }
+    .filter-heading {
+        padding-top: 10px;
+    }
     .filter-items{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         .item {
             padding: 10px;
             flex-basis: 120px;
-            margin: 10px 0;
+            margin: 10px 10px 10px 0;
+        }
+        .active{
+            background: green;
         }
     }
 }
