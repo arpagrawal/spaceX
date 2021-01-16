@@ -20,7 +20,7 @@ export default {
     computed: {},
     mounted() {
       this.getSpacexData()
-      .then(this.handleSpacexDataResponse)
+      .then(this.handleSpacexDataResponse.bind(this, 'initial'))
       .catch(this.handleSpacexDataError);
     },
     methods: {
@@ -43,10 +43,12 @@ export default {
      /**
      * function to handle flight data response
      */
-      handleSpacexDataResponse(res) {
+      handleSpacexDataResponse(callbackType, res) {
         if (res) {
           this.spacexData = res;
-          this.launchYears =  this.getLaunchYears(this.spacexData)
+          if (callbackType === 'initial') {
+          this.launchYears =  this.getLaunchYears(this.spacexData);
+          }
           this.updateURL();
         }
       },  
@@ -72,7 +74,7 @@ export default {
       },
       getFilteredProducts(config) {
         this.getSpacexData(config)
-        .then(this.handleSpacexDataResponse)
+        .then(this.handleSpacexDataResponse.bind(this, ''))
         .catch(this.handleSpacexDataError);
       },
     },
