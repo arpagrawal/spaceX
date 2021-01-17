@@ -5,12 +5,25 @@
         flex-wrap: wrap;
     }
     .filter-section {
-        min-width: 20%;
+        max-width: 20%;
     }
     .result-section {
-        min-width: 80%;
+        max-width: 80%;
         .result-tile {
             flex-basis: 25%;
+        }
+    }
+    @media screen and (max-width: @screen-xs-max) {
+        flex-direction: column;
+        .filter-section {
+            min-width: 100%;
+        }
+        .result-section {
+            min-width: 100%;
+            margin-top: 40px;
+            .result-tile {
+                flex-basis: 100%;
+            }
         }
     }
 }

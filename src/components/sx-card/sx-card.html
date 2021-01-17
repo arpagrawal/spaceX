@@ -1,11 +1,13 @@
 <div class="sx-card">
     <div class="image-section">
-        <!-- <img class="card-img" :src="cardInfo.links.mission_patch_small" :alt="cardInfo.mission_name" /> -->
-        <img />
+        <img class="card-img" :src="cardInfo.links.mission_patch_small" :alt="cardInfo.mission_name" />
     </div>
-                <h1>Heading 1</h1>
-                <h2>Sub-heading </h2>
-                <p>Some more or less text</p>
-                <a href="/" class="button">Click me</a>
-            
+    <p class="mission-name">{{cardInfo.mission_name}}</p>
+    <p>Mission Id</p>
+    <ul v-for="id in cardInfo.mission_id">
+        <li>{{id}}</li>
+    </ul>
+    <p>Launch Year <span>{{cardInfo.launch_year}}</span></p>
+    <p>Successful Launch <span>{{cardInfo.launch_success}}</span></p>
+    <p>Successful landing <span>{{cardInfo.land_success}}</span></p>
 </div>

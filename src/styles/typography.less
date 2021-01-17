@@ -6,6 +6,9 @@ h1 {
     line-height: normal;
     letter-spacing: normal;
     color: @dark-grey;
+    @media screen and (max-width: @screen-xs-max) {
+      font-size: 24px;
+    }
 }
 
 h5 {
@@ -17,24 +20,3 @@ h5 {
     letter-spacing: normal;
     color: @black;
 }
-
-input[type="submit"] {
-    border: 1px solid rgba(191, 216, 227, 0.8);
-    border-radius: 5px;
-    color: #fff;
-    background-color: rgb(54, 134, 169);
-    font-size: 110%;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    // border: 1px solid rgba(191, 216, 227, 0.8);
-    background-color: #f2f4f5;
-    padding: 10px 16px;
-    // border-radius: 5px;
-    font-size: 18px;
-    width: 90%;
-    border: none;
-    outline: none;
-    color: #999999;
-  }
