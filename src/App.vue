@@ -4,17 +4,20 @@
     <div class="sx-content-container">
       <router-view></router-view>
     </div>
+    <sx-footer></sx-footer>
   </div>
 </template>
 
 <script>
 import router from './router';
 import SxHeader from './components/sx-header/sx-header.vue';
+import SxFooter from './components/sx-footer/sx-footer.vue';
 
 export default {
   name: 'App',
   components: {
-    SxHeader
+    SxHeader,
+    SxFooter
   },
   router
 }
@@ -35,7 +38,6 @@ body,
   overflow: hidden;
   display: block;
   position: relative;
-  padding-bottom: 80px;
 }
 
 a {
