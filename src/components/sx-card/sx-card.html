@@ -5,9 +5,9 @@
     <p class="mission-name">{{cardInfo.mission_name}}</p>
     <p>Mission Id</p>
     <ul v-for="id in cardInfo.mission_id">
-        <li>{{id}}</li>
+        <li class="info-text">{{id}}</li>
     </ul>
-    <p>Launch Year <span>{{cardInfo.launch_year}}</span></p>
-    <p>Successful Launch <span>{{cardInfo.launch_success}}</span></p>
-    <p>Successful landing <span>{{cardInfo.land_success}}</span></p>
+    <p>Launch Year <span class="info-text">{{cardInfo.launch_year}}</span></p>
+    <p>Successful Launch <span class="info-text">{{cardInfo.launch_success}}</span></p>
+    <p>Successful landing <span class="info-text">{{cardInfo.land_success || '-'}}</span></p>
 </div>
