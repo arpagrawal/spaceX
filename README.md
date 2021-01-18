@@ -1,4 +1,4 @@
-# aertrip
+# SpaceX
 
 ## Project setup
 ```
