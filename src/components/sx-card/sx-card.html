@@ -9,5 +9,5 @@
     </ul>
     <p>Launch Year <span class="info-text">{{cardInfo.launch_year}}</span></p>
     <p>Successful Launch <span class="info-text">{{cardInfo.launch_success}}</span></p>
-    <p>Successful landing <span class="info-text">{{cardInfo.land_success || '-'}}</span></p>
+    <p>Successful landing <span v-if="cardInfo.rocket && cardInfo.rocket.first_Stage && cardInfo.rocket.first_Stage.cores[0] && cardInfo.rocket.first_Stage.cores[0].land_success" class="info-text">{{cardInfo.rocket.first_stage.cores[0].land_success}}</span></p>
 </div>
